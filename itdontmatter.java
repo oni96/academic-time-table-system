@@ -1,2 +1,0 @@
-HAILS
-HITLER
