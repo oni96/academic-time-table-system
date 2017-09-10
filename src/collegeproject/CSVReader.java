@@ -1,14 +1,31 @@
-
-package collegeproject;
+package csvreader;
+import java.io.*;
 
 
 public class CSVReader {
-    
+
+  
     public static void main(String[] args) {
-        //Indra write the CSVOPening algo here
-        //1 Import files from a folder or root folder
-        //2 Check files with the coloumn headings and verify them to be legal CSVfiles
-        //3 Have seperate classes to store seperate CSVs
+       
+
+        String csvFile = "C:\\Users\\INDRANIL\\Desktop";
+        String csvSplitBy = ",";
+
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+
+            while ((line = br.readLine()) != null) {
+
+                
+                String[] ltt = line.split(cvsSplitBy);
+
+                System.out.println("name[var= " + ltt[10] + " , name=" + ltt[10] + "]");
+
+            }
+
+        } catch (IOException e) {
+            
+        }
+
     }
-    
+
 }
